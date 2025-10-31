@@ -14,24 +14,50 @@
 
 <body class="bg-body-secondary text-body">
   <div class="container py-4">
-    <h2 class="mb-3 text-center">Quotation Table</h2>
-
-    <div class="table-responsive">
-      <table class="table table-striped table-bordered align-middle">
-        <thead class="table-light">
-          <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Category</th>
-            <th>SKU</th>
-            <th>Unit</th>
-            <th>Price</th>
-          </tr>
-        </thead>
-        <tbody id="quotation-body"></tbody>
-      </table>
+    <div class="row mb-3 align-items-center">
+      <div class="col-md-4 mb-2 mb-md-0"> <select id="search-type" class="form-select">
+          <option value="name" selected>Product Name</option>
+          <option value="category">Category</option>
+        </select> </div>
+      <div class="col-md-8">
+        <div class="input-group"> <input id="search-input" type="text" class="form-control"
+            placeholder="Search products..." aria-label="Search products" /> <button class="btn btn-primary"
+            id="search-btn" type="button">Search</button> </div>
+      </div>
     </div>
 
+
+    <div class="container-fluid">
+      <div class="row">
+        <!-- Table Section -->
+        <div class="col-12 col-lg-8 mb-3">
+          <div class="table-responsive">
+            <table class="table table-striped table-bordered align-middle mb-0">
+              <thead class="table-light">
+                <tr>
+                  <th>No</th>
+                  <th>Name</th>
+                  <th>Category</th>
+                  <th>Unit</th>
+                  <th>Price</th>
+                </tr>
+              </thead>
+              <tbody id="quotation-body"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Order Preview Section -->
+        <div class="col-12 col-lg-4">
+          <div class="card shadow-sm">
+            <div class="card-header bg-light fw-semibold">Order Preview</div>
+            <div class="card-body" id="order-preview">
+              ORDER PREVIEW WILL BE HERE
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <nav>
       <ul id="pagination" class="pagination justify-content-center mt-3"></ul>
     </nav>
