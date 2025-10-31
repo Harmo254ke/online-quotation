@@ -1,0 +1,305 @@
+id,name,category,sku,unit,price
+238,Crownbird 64 pages,Crownbird,187AAA36694,Piece,50
+239,Crownbird 80 pages,Crownbird,188AAA21787,Piece,60
+240,Crownbird 96 pages,Crownbird,189AAA84355,Piece,70
+241,Crownbird 120 pages,Crownbird,190AAA31790,Piece,80
+242,Crownbird 200 pages,Crownbird,191AAA77445,Piece,90
+243,A4 Kasuku 64 pages,A4 Kasuku,192AAA49256,Piece,100
+244,A4 Kasuku 80 pages,A4 Kasuku,193AAA26266,Piece,120
+245,A4 Kasuku 96 pages,A4 Kasuku,194AAA24089,Piece,150
+246,A4 Kasuku 120 pages,A4 Kasuku,195AAA47210,Piece,200
+247,A4 Kasuku 200 pages,A4 Kasuku,196AAA63386,Piece,250
+248,Dustless colored chalk,Chalk,197AAA34470,Gross,2800
+249,Dustless white chalk,Chalk,198AAA45431,Gross,2700
+250,Nice chalk,Chalk,199AAA89947,Box,1500
+251,Success chalk,Chalk,200AAA31545,Box,1000
+252,Hafyu chalk,Chalk,201AAA30826,Box,1000
+253,Ledger Quire 1,Ledger,202AAA94203,Piece,400
+254,Ledger Quire 2,Ledger,203AAA59458,Piece,550
+255,Ledger Quire 3,Ledger,204AAA35168,Piece,650
+256,Ledger Quire 4,Ledger,205AAA68263,Piece,750
+257,Stores ledger s1 / s2,Ledger,206AAA82557,Piece,600
+258,Grand in Aid,Ledger,207AAA15441,Piece,600
+259,Journal Quire 1,Journal,208AAA36913,Piece,400
+260,Journal Quire 2,Journal,209AAA58486,Piece,550
+261,Journal Quire 3,Journal,210AAA33549,Piece,650
+262,Journal Quire 4,Journal,211AAA23839,Piece,750
+263,Cashbook Quire 1,Cashbook,212AAA69090,Piece,400
+264,Cashbook Quire 2,Cashbook,213AAA58065,Piece,550
+265,Cashbook Quire 3,Cashbook,214AAA34920,Piece,650
+266,Cashbook Quire 4,Cashbook,215AAA46358,Piece,600
+267,Counter books-news print Quire 1,Counter books-news print,216AAA58769,Piece,300
+268,Counter books-news print Quire 2,Counter books-news print,217AAA34603,Piece,400
+269,Counter books-news print Quire 3,Counter books-news print,218AAA81724,Piece,500
+270,Counter books-news print Quire 4,Counter books-news print,219AAA86530,Piece,600
+271,Counter books-news print Quire 6,Counter books-news print,220AAA30228,Piece,750
+272,Hardcover A5 Bank paper,Hardcover A5,221AAA50465,Piece,200
+273,Hardcover A5 News print,Hardcover A5,222AAA83146,Piece,150
+274,Attendance register,Register,223AAA54341,Piece,100
+275,Admission register,Register,224AAA90968,Piece,550
+276,Commitment register,Register,225AAA96497,Piece,550
+277,Counter foil register,Register,226AAA65439,Piece,550
+278,Staff register,Register,227AAA28068,Piece,450
+279,Elimu register,Register,228AAA22443,Piece,250
+280,Flowered/stripped/yellow pencil,Pencil,229AAA30960,Piece,10
+281,nataraj pencil,Pencil,230AAA80490,Piece,50
+282,pelikan pencil,Pencil,231AAA40145,Piece,60
+283,Hb-steadler pencil,Pencil,232AAA21044,Piece,80
+284,Steadler – 2b/3b/4b pencil,Pencil,233AAA87521,Piece,50
+285,Fullscaps - kasuku,Reams,234AAA30039,Ream,1200
+286,Fullscaps-crownbird,Reams,235AAA82912,Ream,1000
+287,Photocopy – A4,Reams,236AAA81211,Ream,1200
+847,Photocopy – A4,Reams,236AAA81211,Box,6000
+288,Photocopy – A3,Reams,237AAA64502,Ream,2500
+289,Graph paper,Reams,238AAA64970,Ream,1000
+290,Fine point pen,Biro pens,239AAA24042,Packet,950
+291,Bic biro pen(blue),Biro pens,240AAA91859,Piece,35
+292,Obama pen(blue),Biro pens,241AAA82942,Piece,15
+293,Executive pen,Biro pens,242AAA51481,Piece,70
+294,Speedo pen,Biro pens,243AAA71639,Piece,25
+295,Envelop Brown dl (25pcs),Envelops,244AAA37431,Bunch,75
+296,Envelop Brown c7(25pcs),Envelops,245AAA14484,Bunch,50
+297,Envelop Brown A5(25pcs),Envelops,246AAA99127,Bunch,125
+298,Envelop Brown A4(25pcs),Envelops,247AAA73280,Bunch,250
+299,Envelop White dl(25pcs),Envelops,248AAA28621,Bunch,125
+300,Graph book a5,Books,249AAA61966,Dozen,1000
+301,Drawing book a5,Books,250AAA62154,Dozen,900
+302,Handwriting book a5,Books,251AAA14708,Dozen,900
+303,School bell(big),Bells,252AAA20662,Piece,4000
+304,School bell(medium),Bells,253AAA23351,Piece,3500
+305,Digital Wall clock,Wall clocks,254AAA49805,Piece,4000
+306,Normal wall clock,Wall clocks,255AAA33500,Piece,2500
+307,Bb ruler wooden,Blackboard accessories,256AAA98627,Piece,350
+308,Protractor wooden,Blackboard accessories,257AAA27659,Piece,350
+309,Compass wooden,Blackboard accessories,258AAA19283,Piece,350
+310,Set square wooden,Blackboard accessories,259AAA52492,Piece,350
+311,Bb ruler plastic,Blackboard accessories,260AAA81525,Piece,750
+312,Protractor plastic,Blackboard accessories,261AAA70025,Piece,750
+313,Compass plastic ,Blackboard accessories,262AAA39427,Piece,750
+314,Kangaroo Stappler – large HD,Staplers,263AAA14664,Piece,7000
+315,Kangaroo Stappler - medium,Staplers,264AAA59248,Piece,800
+316,Stapples 24/6 1000,Stapples,265AAA23127,Piece,100
+317,Stapples 24/6 5000,Stapples,266AAA21031,Piece,500
+318,Stapples 23/17 HD,Stapples,267AAA20639,Piece,800
+319,Kangaroo Paper punch – large HD,Paper punch,268AAA69959,Piece,7000
+320,Kangaroo Paper punch - big,Paper punch,269AAA65556,Piece,1000
+321,Kangaroo Paper punch - medium,Paper punch,270AAA56171,Piece,800
+322,Kangaroo Paper punch - small,Paper punch,271AAA60853,Piece,400
+323,Colored pencils – short,Pencil,272AAA26667,Packet,200
+324,Colored pencils – long,Pencil,273AAA40151,Packet,300
+325,crayons,crayons,274AAA70960,Piece,100
+326,Modeling clay 100gms,Clay,275AAA49918,Piece,200
+327,Modeling clay 500gms,Clay,276AAA87316,Piece,500
+328,Wooden local Duster,Dusters,277AAA85647,Piece,80
+329,Plastic Duster,Dusters,278AAA89666,Piece,200
+330,White board Duster,Dusters,279AAA88164,Piece,250
+331,Pelican White out,White out,280AAA12919,Piece,300
+332,Bic White out,White out,281AAA13291,Piece,350
+333,Snowman Marker,Felt pen,282AAA76461,Piece,60
+334,Permanent marker,Felt pen,283AAA60464,Piece,150
+335,Pelican Marker,Felt pen,284AAA17380,Piece,250
+336,White board marker,Felt pen,285AAA66806,Piece,300
+337,Local Ink- mbuni,Felt pen ink,286AAA89463,Piece,250
+338,Import Ink– luxor/allmark,Felt pen ink,287AAA78553,Piece,350
+339,Whiteboard marker Ink,Felt pen ink,288AAA87391,Piece,300
+340,Brown papers,Papers,289AAA25925,Piece,30
+341,Manila Papers,Papers,290AAA79429,Piece,50
+342,Plain white paper,Papers,291AAA37538,Piece,20
+343,Flipcharts papers,Papers,292AAA27027,Piece,1000
+344,Kasuku looseleaf,Full scalps,293AAA96947,Piece,250
+345,Kasuku looseleaf premium,Full scalps,294AAA54026,Piece,300
+346,Form A-primary ,Data books,295AAA14176,Piece,400
+347,Form A-pre school,Data books,296AAA67444,Piece,400
+348,Inventory books,Data books,297AAA12232,Piece,300
+349,Report book,Data books,298AAA15678,Piece,50
+350,Teachers preparation books,Prep books,299AAA47781,Piece,500
+351,Schemes of work,Prep books,300AAA71909,Piece,500
+352,Lesson plans,Prep books,301AAA91870,Piece,500
+353,Mark books,Prep books,302AAA61672,Piece,500
+354,Payment voucher ,Payment books,303AAA54594,Piece,400
+355,Payment voucher printed,Payment books,304AAA23922,Piece,700
+356,Payment voucher,Payment books,305AAA53794,Piece,10
+357,Grant in aid,Payment books,306AAA86763,Piece,600
+358,Receipt book,Payment books,307AAA85799,Piece,100
+359,Cash sale 12up,Payment books,308AAA58525,Piece,100
+360,Cash sale 8up,Payment books,309AAA53281,Piece,100
+361,Cash sale 6up,Payment books,310AAA80041,Piece,100
+362,Carbon paper pkt,Carbon paper,311AAA44555,Packet,3000
+363,Carbon paper pc,Carbon paper,312AAA88656,Piece,30
+364,kofa set,Mathematical sets,313AAA48929,Piece,200
+365,oxford set,Mathematical sets,314AAA66248,Piece,400
+366,Classmate clear set,Mathematical sets,315AAA37772,Piece,400
+367,Cellotape ½ inch,Cellotape,316AAA87980,Piece,60
+368,Cellotape ¾  inch,Cellotape,317AAA92140,Piece,80
+369,Cellotape 1 inch,Cellotape,318AAA52040,Piece,150
+370,Cellotape 2 inch,Cellotape,319AAA31638,Piece,200
+371,Cellotape 2 inch max,Cellotape,320AAA56507,Piece,300
+372,Masking tape ½ inch,Masking tape,321AAA99143,Piece,80
+373,Masking tape ¾ inch,Masking tape,322AAA33151,Piece,150
+374,Masking tape 1 inch,Masking tape,323AAA83328,Piece,200
+375,Masking tape 2 inch,Masking tape,324AAA89055,Piece,300
+376,Binding tape,Binding,325AAA41457,Piece,500
+377,Binding Glue 500gms,Binding,326AAA92710,Piece,300
+378,Binding Glue 1kg,Binding,327AAA40635,Piece,500
+379,Office glue 90 gms,Office glue,328AAA94166,Piece,80
+380,Office glue 160 gms,Office glue,329AAA45748,Piece,150
+381,Office glue 1 kg ,Office glue,330AAA65543,Piece,500
+382,Prit glue 11 gms,Prit glue,331AAA66872,Piece,300
+383,Prit glue 22 gms,Prit glue,332AAA58209,Piece,400
+384,Prit 43 gms,Prit glue,333AAA37116,Piece,500
+385,Metallic Sharpener,Sharpener,334AAA86097,Piece,50
+386,plastic Sharpener,Sharpener,335AAA40552,Piece,40
+387,Card board,Clipboard,336AAA79009,Piece,150
+388,Plastic-clear,Clipboard,337AAA87842,Piece,250
+389,Rubber bands,Rubber bands,338AAA66601,Piece,200
+390,plastic file,Files,339AAA61329,Piece,120
+391,manila file,Files,340AAA19750,Piece,100
+392,folders file,Files,341AAA84110,Piece,100
+393,Wallet manila file,Files,342AAA50849,Piece,100
+394,Wallet plastic file,Files,343AAA78960,Piece,150
+395,Box file file,Files,344AAA29174,Piece,400
+396,Br 80 pelikan Erasor,Erasors,345AAA57978,Piece,50
+397,Br 40 pelikan Erasor,Erasors,346AAA96065,Piece,35
+398,gomme Erasor,Erasors,347AAA43288,Piece,5
+399,medium flag,flag,348AAA70105,Piece,3000
+400,large flag,flag,349AAA74798,Piece,4000
+401,quill fountain pen,Fountain pen,350AAA92031,Piece,150
+402,Ink small fountain pen,Fountain pen,351AAA23144,Piece,150
+403,Ink medium fountain pen,Fountain pen,352AAA81938,Piece,250
+404,normal ruler,Ruler,353AAA58487,Piece,50
+405,haco ruler,Ruler,354AAA70783,Piece,100
+406,local ruler,Ruler,355AAA63801,Piece,50
+407,Office pins,Office point,356AAA92538,Piece,70
+408,Paper clips,Office point,357AAA88508,Piece,70
+409,Thumb tucks,Office point,358AAA45881,Piece,70
+410,Local- kofa/ horse stamp pad,Stamp pad,359AAA78263,Piece,300
+411,Pelikan stamp pad,Stamp pad,360AAA25213,Piece,500
+412,Local stamp pad ink – kofa/horse,Stamp pad ink,361AAA45234,Piece,250
+413,Pelican stamp pad ink,Stamp pad ink,362AAA47366,Piece,500
+414,Fx 82 ms calculator,Calculator,363AAA16972,Piece,2500
+415,Casio calculator medium,Calculator,364AAA66688,Piece,2000
+416,Casio calculator large,Calculator,365AAA36439,Piece,3000
+417,Football,Balls local,366AAA54137,Piece,3500
+418,Volleyball,Balls local,367AAA88213,Piece,3000
+419,Netball,Balls local,368AAA16126,Piece,3000
+420,Handball size 3,Balls local,369AAA51326,Piece,2800
+421,Handball size 2,Balls local,370AAA99090,Piece,2500
+422,Volleyball net with wire,Nets,371AAA44696,Piece,4500
+423,Volleyball net without wire,Nets,372AAA79485,Piece,3700
+424,Basket ball ring,Rings,373AAA32934,Piece,3000
+425,Netball ring,Rings,374AAA38991,Piece,3000
+426,Bicycle pump,pump,375AAA94278,Piece,1500
+427,Volleyball  mikasa mv 200 ,Balls import,376AAA43703,Piece,7500
+428,Volleyball mikasa mv 300,Balls import,377AAA14404,Piece,9800
+429,Netball 3500 (brown),Balls import,378AAA34550,Piece,5000
+430,Football addidas,Balls import,379AAA91296,Piece,7500
+431,Basket ball,Balls import,380AAA93111,Piece,5000
+432,Shot put,Field,381AAA50071,Piece,6200
+433,Discuss,Field,382AAA93213,Piece,6000
+434,javelin,Field,383AAA48692,Piece,5500
+435,normal plastic whistle,Whistles,384AAA12092,Piece,100
+436,metalic whistle,Whistles,385AAA24666,Piece,250
+437,Jirex import whistle,Whistles,386AAA95938,Piece,500
+438,Whiteboard 4x3 ft,Whiteboards,387AAA60758,Piece,8000
+439,Whiteboard 8x4 ft,Whiteboards,388AAA40491,Piece,15000
+440,Grid board 4x3 ft,Board,389AAA17503,Piece,12000
+441,Crucible with lid,Apparatus,390AAA21177,Piece,400
+442,Tongs,Apparatus,391AAA92223,Piece,400
+443,Deflagrating spoon,Apparatus,392AAA56664,Piece,950
+444,Retort stand and clamp,Apparatus,393AAA81101,Piece,2500
+445,Pipe clay triangle,Apparatus,394AAA22075,Piece,600
+446,Tripod stand,Apparatus,395AAA87638,Piece,300
+447,Wire gauze,Apparatus,396AAA50230,Piece,270
+448,spatula,Apparatus,397AAA15152,Piece,250
+449,Stirring rod,Apparatus,398AAA68619,Piece,250
+450,Gas canister,Apparatus,399AAA59139,Piece,1800
+451,Delivery tubes,Apparatus,400AAA94178,Piece,200
+452,Wooden splints,Apparatus,401AAA48258,Piece,2500
+453,Hand gloves set,Apparatus,402AAA49652,Piece,1500
+454,Hand lens,Apparatus,403AAA49976,Piece,250
+455,Labels,Apparatus,404AAA85161,Piece,200
+456,Lab coat,Apparatus,405AAA90973,Piece,1500
+457,Dry cell pair,Apparatus,406AAA82174,Piece,500
+458,Propanone(acetone),Chemicals,407AAA78334,Piece,3600
+459,Copper II sulphate,Chemicals,408AAA85834,Piece,2890
+460,phenolphthalein,Chemicals,409AAA48002,Piece,2000
+461,Sodium hydroxide,Chemicals,410AAA88821,Piece,2500
+484,Sodium hydroxide,Chemicals,410AAA88821,Piece,1500
+462,Sulphuric acid,Chemicals,411AAA26686,Piece,3500
+463,Nitric acid,Chemicals,412AAA67333,Piece,3500
+464,Anhydrous calcium chloride,Chemicals,413AAA15416,Piece,2800
+465,Methylated spirit 1ltr,Chemicals,414AAA53019,Piece,1500
+466,Scalpels,Apparatus,415AAA44170,Packet,2000
+467,Portable burner,Apparatus,416AAA89659,Piece,5500
+468,Mortar and pestle,Apparatus,417AAA97482,Piece,800
+469,Alcohol thermometer,Apparatus,418AAA33529,Piece,1800
+470,Pooter,Apparatus,419AAA33151,Piece,1500
+471,Visking tubing,Apparatus,420AAA89825,Piece,3500
+472,Pair of forceps,Apparatus,421AAA79506,Piece,300
+473,pendulum,Apparatus,422AAA98348,Piece,1000
+474,Bunsen burner,Apparatus,423AAA16589,Piece,1250
+475,Electronic balance,Apparatus,424AAA60824,Piece,18000
+476,Microscope,Apparatus,425AAA67703,Piece,20000
+477,Microscope glass slides,Apparatus,426AAA11478,Piece,1000
+478,Dropper,Apparatus,427AAA80309,Piece,100
+479,Evaporating dish,Apparatus,428AAA52326,Piece,250
+480,Ethanol,Chemicals,429AAA82404,Piece,3600
+481,Hydrogen peroxide,Chemicals,430AAA80448,Piece,3500
+482,Methyl orange,Chemicals,431AAA16785,Piece,2500
+483,Hydrochloric acid,Chemicals,432AAA66451,Piece,3500
+485,Calcium hydrogen carbonate,Chemicals,433AAA26422,Piece,3200
+486,Surgical spirit 1ltr,Chemicals,434AAA64182,Piece,1500
+487,sodium,Metals,435AAA33372,Piece,4000
+488,magnesium,Metals,436AAA50194,Piece,3500
+489,Potassium magnate 250gm,Metals,437AAA15728,Piece,3500
+490,zinc,Metals,438AAA15399,Piece,3000
+491,Iron fillings,Metals,439AAA39516,Piece,2500
+492,Iodine crystals 100gm,Metals,440AAA33287,Piece,3500
+493,Test tubes,Tubes & flasks,441AAA85939,Set,2000
+533,Test tubes,Tubes & flasks,441AAA85939,Piece,200
+494,Test tube holder,Tubes & flasks,442AAA32320,Piece,300
+495,Test tube rack plastic,Tubes & flasks,443AAA63752,Piece,500
+496,Boiling tube,Tubes & flasks,444AAA56561,Piece,150
+497,Separating funnel,Tubes & flasks,445AAA86400,Piece,2500
+498,pipette,Tubes & flasks,446AAA50109,Piece,600
+499,Pipette filler,Tubes & flasks,447AAA33598,Piece,1000
+500,Plastic beaker 250ml,Tubes & flasks,448AAA84936,Piece,500
+501,Plastic beaker 500ml,Tubes & flasks,449AAA12335,Piece,600
+502,Glass beaker 250ml,Tubes & flasks,450AAA41977,Piece,600
+503,Syringe,Tubes & flasks,451AAA12761,Piece,150
+504,burette,Tubes & flasks,452AAA17143,Piece,950
+505,Conical flask,Tubes & flasks,453AAA18983,Piece,700
+506,Dropping funnel,Tubes & flasks,454AAA96428,Piece,1000
+507,Flat bottomed flask,Tubes & flasks,455AAA38820,Piece,980
+508,Filter funnel plastic,Tubes & flasks,456AAA48382,Piece,150
+509,Round bottomed flask,Tubes & flasks,457AAA38617,Piece,990
+510,Measuring cylinder 10ml,Tubes & flasks,458AAA96159,Piece,400
+511,Measuring cylinder 50ml,Tubes & flasks,459AAA37100,Piece,500
+512,Measuring cylinder 100ml,Tubes & flasks,460AAA95994,Piece,700
+513,Wash bottle 500ml,Tubes & flasks,461AAA12184,Piece,500
+514,Ammeter,Measures,462AAA91168,Piece,2550
+515,voltmeter,Measures,463AAA58092,Piece,2550
+516,Bar magnet,Measures,464AAA21959,Piece,1200
+517,Litmus paper red or blue,Measures,465AAA86569,Piece,500
+518,Stop watches,Measures,466AAA14242,Piece,800
+519,Circulatory system,Charts,467AAA77994,Piece,2500
+520,Excretory system,Charts,468AAA47144,Piece,2500
+521,Digestive system,Charts,469AAA38351,Piece,2500
+522,PH strip,Charts,470AAA23349,Piece,1000
+523,Universal indicator solution,Charts,471AAA23835,Piece,3000
+524,Universal indicator chart,Charts,472AAA38853,Piece,1000
+525,Periodic chart,Charts,473AAA53308,Piece,3500
+526,Bic biro pen(red),Biro pens,476AAA43477,Piece,35
+527,obama pen(red),Obama pen,477AAA15329,Piece,15
+528,Biro pen(blue),Biro pens,478AAA34711,Piece,35
+529,Painting brushes,brushes,479AAA54104,Packet,600
+531,Match box,,481AAA45142,Piece,200
+532,Distilled Water,,482AAA73447,Jerrican,1500
+534,Obama pens(blue) carton,,483AAA90602,Carton,10000
+539,Counter quire 1,Counter book,488AAA84619,Piece,350
+540,Counter quire 2,Counter book,489AAA24170,Piece,450
+541,Counter quire 3,,490AAA78198,Piece,650
+542,Counter quire 4,,491AAA54753,Piece,750
+543,Wallclock cells(eveready),cells,492AAA59152,Piece,50
+862,Printer ink(black),ink,605AAA66014,piece,500
+863,Longhorn Junior Mathematics tables,tables,606AAA42430,piece,570

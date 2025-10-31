@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Simple CSV Loader</title>
+</head>
+
+<body>
+  <h2>Loaded CSV Data</h2>
+  <pre id="output">Loading...</pre>
+
+  <script>
+    async function loadCSV() {
+      try {
+        const response = await fetch('data/quotation.csv');
+        const text = await response.text();
+        const rows = text.trim().split(/\r?\n/).map(r => r.split(','));
+        document.getElementById('output').textContent =
+          JSON.stringify(rows.slice(0, 10), null, 2);
+        console.log('CSV loaded:', rows.length, 'rows');
+      } catch (err) {
+        document.getElementById('output').textContent = 'Failed to load CSV.';
+        console.error(err);
+      }
+    }
+
+    window.addEventListener('load', loadCSV);
+  </script>
+</body>
+
+</html>
