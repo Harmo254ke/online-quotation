@@ -30,24 +30,20 @@ const printOrder = (event, orderItems) => {
   const totalsPrint = document.getElementById("totals-print-button");
   const currentText = button.textContent.trim();
   if (currentText === "go to print page") {
-    button.textContent = "print order form"
-    document.body.innerHTML = ""
-    document.body.appendChild(orderPreview)
-    document.body.appendChild(totalsPrint)
+    const printStyle = document.createElement('link');
+    printStyle.rel = 'stylesheet';
+    printStyle.href = './src/styles/printorderform.css'; // <-- your print-specific stylesheet
+    printStyle.media = 'all';
+    printStyle.onload = () => {
+      button.textContent = "print order form"
+      document.body.innerHTML = ""
+      document.body.appendChild(orderPreview)
+      document.body.appendChild(totalsPrint)
+    };
+    document.head.appendChild(printStyle);
   } else {
     window.print();
   }
-  // Create a link element for the print stylesheet
-  // const orderPreview = document.getElementById("order-preview");
-  // const printStyle = document.createElement('link');
-  // printStyle.rel = 'stylesheet';
-  // printStyle.href = './src/styles/printorderform.css'; // <-- your print-specific stylesheet
-  // printStyle.media = 'all';
-  // printStyle.onload = () => {
-  //   window.print();
-  //   printStyle.remove(); // Optional: cleanup after print
-  // };
-  // document.head.appendChild(printStyle);
 }
 
 /**
