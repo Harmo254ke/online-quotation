@@ -1,6 +1,15 @@
 import Money from "./Money.js";
 
 /**
+ * @typedef {Object} Quotation
+ * @property {number} id
+ * @property {string} name
+ * @property {string} category
+ * @property {string} unit
+ * @property {number} price
+ */
+
+/**
   * @param {string} quantityId
   * @param {string} amountId
   * @param {number} price
@@ -32,13 +41,6 @@ const changeInnerText = (event) => {
 /**
   * @param {HTMLButtonElement} addButton
   */
-const confirm = (addButton) => {
-  //TODO: OTHER OPERATIONS FIRST
-  // addButton.textContent = "Add"
-}
-/**
-  * @param {HTMLButtonElement} addButton
-  */
 
 const cancel = (addButton) => {
   addButton.textContent = "Add"
@@ -48,8 +50,9 @@ const cancel = (addButton) => {
  * Renders paginated table
  * @param {Quotation[]} data
  * @param {number} pageSize
+  *@param {(quotation: Quotation, quantity: number) => void} addToOrderForm
  */
-const QuotationTable = (data, pageSize) => {
+const QuotationTable = (data, pageSize, addToOrderForm) => {
   let currentPage = 1;
   /** @type {number} */
   const totalPages = Math.ceil(data.length / pageSize);
@@ -60,6 +63,19 @@ const QuotationTable = (data, pageSize) => {
 
   // First time load: first page by default, 'useEffect'
   renderPage(tbody, currentPage, totalPages, pagination, pageSize, data);
+  /**
+    * @param {HTMLButtonElement} addButton
+    * @param {string} quantityId
+    * @param {Quotation} item
+    */
+  const confirm = (addButton, quantityId, item) => {
+    /** @type {HTMLInputElement} */
+    const quantityInput = document.getElementById(quantityId);
+    const quantity = Number(quantityInput.value.trim())
+    if (quantity === 0) return;
+    addToOrderForm(item, quantity)
+  }
+
 
   /**
    * Renders paginated table
@@ -161,7 +177,7 @@ const QuotationTable = (data, pageSize) => {
       // Button: Confirm
       const confirmBtn = document.createElement("button");
       confirmBtn.className = "btn btn-success btn-sm";
-      confirmBtn.onclick = () => confirm(addBtn);
+      confirmBtn.onclick = () => confirm(addBtn, quantityInputId, item);
       confirmBtn.textContent = "Confirm";
 
       // Button: Cancel
