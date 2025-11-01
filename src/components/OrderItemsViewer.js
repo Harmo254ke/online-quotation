@@ -23,23 +23,36 @@ const OrderItemsViewer = (orderItems) => {
 
   // Create table
   const table = document.createElement("table");
-  table.className = "table table-striped table-bordered align-middle mb-0";
+  table.className = "table table-striped table-bordered align-middle mb-0 order-preview";
+  // Define column layout
+  const colgroup = document.createElement("colgroup");
+  colgroup.innerHTML = `
+  <col style="width: 5%;">
+  <col style="width: 35%;">
+  <col style="width: 15%;">
+  <col style="width: 10%;">
+  <col style="width: 15%;">
+  <col class="not-print" style="width: 10%;">
+`;
+  table.appendChild(colgroup);
 
   // Create header
   const thead = document.createElement("thead");
   thead.className = "table-light";
   thead.innerHTML = `
     <tr>
-      <th>No</th>
+      <th></th>
       <th>Product</th>
       <th>Price</th>
       <th>Qty</th>
       <th>Amount</th>
+      <th class="not-print">Edit</th>
     </tr>
   `;
 
   // Create body
   const tbody = document.createElement("tbody");
+  tbody.className = "small"
 
   orderItems.forEach((item, index) => {
     const tr = document.createElement("tr");
@@ -67,7 +80,11 @@ const OrderItemsViewer = (orderItems) => {
       minimumFractionDigits: 2,
     }).format(item.amount);
 
-    tr.append(no, name, price, qty, amount);
+    const editButton = document.createElement("td")
+    editButton.className = "not-print"
+    editButton.textContent = "edit"
+    tr.append(no, name, price, qty, amount, editButton);
+
     tbody.appendChild(tr);
   });
 

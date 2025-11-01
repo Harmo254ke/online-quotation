@@ -1,33 +1,9 @@
-body {
-  font-family: sans-serif;
-  margin: 2rem;
-  background: #fafafa;
-}
-
-table {
-  border-collapse: collapse;
+.table {
+  table-layout: fixed;
   width: 100%;
-  background: #fff;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
-  border-radius: 6px;
-  overflow: hidden;
 }
-
-th, td {
-  border: 1px solid #e0e0e0;
-  padding: 8px 12px;
-  text-align: left;
-}
-
-th {
-  background: #f7f7f7;
-  font-weight: 600;
-}
-
-tr:nth-child(even) {
-  background: #f9f9f9;
-}
-
-tr:hover {
-  background: #f1f1f1;
+.table th,
+.table td {
+  word-wrap: break-word;
+  white-space: normal;
 }

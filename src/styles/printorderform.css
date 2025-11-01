@@ -1,0 +1,38 @@
+@media print {
+
+  .quotation-table-section,
+  .not-print {
+    display: none;
+  }
+
+  table.order-preview {
+    table-layout: auto;
+    border: 1px solid lightgreen;
+    width: 100%;
+  }
+
+  table.order-preview>thead>tr>th {
+    color: green;
+    font-weight: bolder;
+    text-transform: uppercase;
+    border: 1px solid lightgreen;
+  }
+
+  div.totals {
+    color: green;
+  }
+
+  table.order-preview>tbody>tr>td {
+    color: green;
+  }
+
+  table.order-preview>colgroup>col {
+    width: auto;
+  }
+
+  table.order-preview>thead>tr>th,
+  table.order-preview>tbody>tr>td {
+    white-space: normal;
+    word-wrap: break-word;
+  }
+}

@@ -18,7 +18,34 @@ import { loadCSV } from "./database/loadCsv.js";
 * @property {number} amount
 */
 
+/**
+  * @param {OrderItem[]} orderItems
+  */
+const printOrder = (orderItems) => {
+  if (orderItems.length === 0) return;
+  // Create a link element for the print stylesheet
+  const printStyle = document.createElement('link');
+  printStyle.rel = 'stylesheet';
+  printStyle.href = './src/styles/printorderform.css'; // <-- your print-specific stylesheet
+  printStyle.media = 'print';
+  printStyle.onload = () => {
+    window.print();
+    printStyle.remove(); // Optional: cleanup after print
+  };
+  document.head.appendChild(printStyle);
+}
+
+/**
+  * @param {number[]} amounts
+  */
+const updateTotal = (amounts) => {
+  const newTotal = amounts.reduce((a, b) => a + b, 0)
+  const totalViewer = document.getElementById("order-total")
+  totalViewer.textContent = newTotal;
+}
 window.addEventListener('load', async () => {
+  /** @type {HTMLButtonElement} */
+  const printButton = document.getElementById("print-order-btn");
   const data = await loadCSV()
   /** @type {OrderItem[]} */
   const orderItems = []
@@ -39,8 +66,14 @@ window.addEventListener('load', async () => {
     }
     orderItems.push(orderItem)
     OrderItemsViewer(orderItems)
+    updateTotal(orderItems.map(i => i.amount))
   }
-  QuotationTable(data, 10, addToOrder);
+
+  printButton.onclick = () => printOrder(orderItems)
+  QuotationTable(data, 7, addToOrder);
 });
+
+
+
 
 

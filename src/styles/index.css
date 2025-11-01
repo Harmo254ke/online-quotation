@@ -1,0 +1,9 @@
+@page {
+  margin: 0;
+  /* Remove browser/printer default margins */
+}
+
+.order-preview {
+  max-height: 80vh;
+  overflow-y: auto;
+}
