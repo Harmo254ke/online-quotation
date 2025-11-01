@@ -20,19 +20,34 @@ import { loadCSV } from "./database/loadCsv.js";
 
 /**
   * @param {OrderItem[]} orderItems
+  * @param {PointerEvent} event
   */
-const printOrder = (orderItems) => {
+const printOrder = (event, orderItems) => {
   if (orderItems.length === 0) return;
-  // Create a link element for the print stylesheet
-  const printStyle = document.createElement('link');
-  printStyle.rel = 'stylesheet';
-  printStyle.href = './src/styles/printorderform.css'; // <-- your print-specific stylesheet
-  printStyle.media = 'all';
-  printStyle.onload = () => {
+  /** @type {HTMLButtonElement}*/
+  const button = event.target;
+  const orderPreview = document.getElementById("order-preview");
+  const totalsPrint = document.getElementById("totals-print-button");
+  const currentText = button.textContent.trim();
+  if (currentText === "go to print page") {
+    button.textContent = "print order form"
+    document.body.innerHTML = ""
+    document.body.appendChild(orderPreview)
+    document.body.appendChild(totalsPrint)
+  } else {
     window.print();
-    printStyle.remove(); // Optional: cleanup after print
-  };
-  document.head.appendChild(printStyle);
+  }
+  // Create a link element for the print stylesheet
+  // const orderPreview = document.getElementById("order-preview");
+  // const printStyle = document.createElement('link');
+  // printStyle.rel = 'stylesheet';
+  // printStyle.href = './src/styles/printorderform.css'; // <-- your print-specific stylesheet
+  // printStyle.media = 'all';
+  // printStyle.onload = () => {
+  //   window.print();
+  //   printStyle.remove(); // Optional: cleanup after print
+  // };
+  // document.head.appendChild(printStyle);
 }
 
 /**
@@ -69,7 +84,7 @@ window.addEventListener('load', async () => {
     updateTotal(orderItems.map(i => i.amount))
   }
 
-  printButton.onclick = () => printOrder(orderItems)
+  printButton.onclick = (event) => printOrder(event, orderItems)
   QuotationTable(data, 7, addToOrder);
 });
 
