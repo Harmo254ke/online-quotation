@@ -27,7 +27,7 @@ const printOrder = (orderItems) => {
   const printStyle = document.createElement('link');
   printStyle.rel = 'stylesheet';
   printStyle.href = './src/styles/printorderform.css'; // <-- your print-specific stylesheet
-  printStyle.media = 'print';
+  printStyle.media = 'all';
   printStyle.onload = () => {
     window.print();
     printStyle.remove(); // Optional: cleanup after print
