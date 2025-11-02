@@ -24,6 +24,7 @@ import { loadCSV } from "./database/loadCsv.js";
   */
 const printOrder = (event, orderItems) => {
   if (orderItems.length === 0) return;
+  console.log("It is not that first now slow")
   /** @type {HTMLButtonElement}*/
   const button = event.target;
   const orderPreview = document.getElementById("order-preview");
