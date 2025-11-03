@@ -21,9 +21,18 @@
 </head>
 
 <body class="bg-body-secondary text-body page-contents">
-  <div class="container-fluid py-4 ">
+  <!-- 🧾 App Header -->
+  <header class="bg-white shadow-sm py-2 border-bottom position-sticky top-0 z-3">
+    <div class="container-fluid d-flex justify-content-center align-items-center position-relative">
+      <!-- Centered App Name -->
+      <h5 class="m-0 fw-bold text-success text-uppercase">Quotation</h5>
 
-
+      <!-- Logo on Right -->
+      <img src="./assets/logo.png" alt="App Logo" class="position-absolute end-0 me-3"
+        style="height: 40px; width: auto;" />
+    </div>
+  </header>
+  <div class="container-fluid py-2 ">
     <div class="container-fluid">
       <div class="row">
         <!-- Table Section -->
@@ -60,7 +69,7 @@
                   <th></th>
                 </tr>
               </thead>
-              <tbody id="quotation-body" class="small"></tbody>
+              <tbody id="quotation-body"></tbody>
             </table>
           </div>
           <nav>
@@ -75,17 +84,26 @@
             <div class="card-body printable-container order-preview" id="order-preview">
               No order items added
             </div>
-            <div class="card-footer d-flex  justify-content-between align-items-center bg-light"
+
+            <div class="card-footer d-flex justify-content-between align-items-center bg-light"
               id="totals-print-button">
               <div class="fw-semibold totals">
                 Total order value : <span id="order-total" class="text-success">KSh 0.00</span>
               </div>
-              <a href="./printing/printorderform.html" id="print-order-btn" class="btn btn-primary btn-sm">
-                <i class="bi bi-printer"></i> Go to print page
-              </a>
+
+              <div class="d-flex gap-2">
+                <button id="clear-order-btn" class="btn btn-outline-danger btn-sm">
+                  <i class="bi bi-trash"></i> Clear Order
+                </button>
+
+                <a href="./printing/printorderform.html" id="print-order-btn" class="btn btn-primary btn-sm">
+                  <i class="bi bi-printer"></i> Go to print page
+                </a>
+              </div>
             </div>
           </div>
         </div>
+
       </div>
     </div>
   </div>

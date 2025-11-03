@@ -10,6 +10,8 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("vendor-town").textContent = orderDetails.vendorTown || "-";
   document.getElementById("vendor-contact").textContent = orderDetails.vendorContact || "-";
 
+  //additional totals
+
   // populate order items
   const tbody = document.getElementById("order-items-body");
   let total = 0;
@@ -19,6 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
     total += amount;
     tr.innerHTML = `
       <td>${i + 1}</td>
+      <td>${item.sku}</td>
       <td>${item.name}</td>
       <td>${item.quantity}</td>
       <td>${item.price.toLocaleString()}</td>
@@ -28,7 +31,13 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   document.getElementById("order-total").textContent = `KSh ${total.toLocaleString()}`;
+  document.getElementById("top-total").textContent = `KSh ${total.toLocaleString()}`;
 
   // print button
   document.getElementById("print-btn").addEventListener("click", () => window.print());
+
+  document.getElementById("back-btn").addEventListener("click", () => {
+    console.log("navigating back");
+    window.history.back();
+  });
 });

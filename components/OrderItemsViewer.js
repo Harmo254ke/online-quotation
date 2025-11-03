@@ -2,6 +2,7 @@
  * @typedef {Object} OrderItem
  * @property {number} id
  * @property {string} name
+  * @property {string} sku
  * @property {number} price
  * @property {number} quantity
  * @property {number} amount
@@ -52,7 +53,6 @@ const OrderItemsViewer = (orderItems) => {
 
   // Create body
   const tbody = document.createElement("tbody");
-  tbody.className = "small"
 
   orderItems.forEach((item, index) => {
     const tr = document.createElement("tr");

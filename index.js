@@ -5,6 +5,7 @@ import { loadCSV } from "./database/loadCsv.js";
  * @typedef {Object} Quotation
  * @property {number} id
  * @property {string} name
+ * @property {string} sku
  * @property {string} category
  * @property {string} unit
  * @property {number} price
@@ -13,6 +14,7 @@ import { loadCSV } from "./database/loadCsv.js";
 * @typedef {Object} OrderItem
 * @property {number} id
 * @property {string} name
+* @property {string} sku
 * @property {number} price
 * @property {number} quantity
 * @property {number} amount
@@ -79,8 +81,15 @@ window.addEventListener('load', async () => {
   const printButton = document.getElementById("print-order-btn");
   const data = await loadCSV()
   /** @type {OrderItem[]} */
-  const orderItems = []
+  let orderItems = []
 
+  /** @type {OrderItem[]} */
+  const localStorageOrderItems = JSON.parse(localStorage.getItem("orderItems") || "[]");
+  if (localStorageOrderItems.length > 0) {
+    orderItems = localStorageOrderItems;
+    OrderItemsViewer(orderItems)
+    updateTotal(orderItems.map(i => i.amount))
+  }
   /**
    * @param {Quotation} item
    * @param {number} quantity
@@ -96,6 +105,7 @@ window.addEventListener('load', async () => {
     }
     orderItems.push(orderItem)
     OrderItemsViewer(orderItems)
+    localStorage.setItem("orderItems", JSON.stringify(orderItems));
     updateTotal(orderItems.map(i => i.amount))
   }
 
@@ -103,6 +113,18 @@ window.addEventListener('load', async () => {
     printOrder(e, orderItems)
   });
   QuotationTable(data, 7, addToOrder);
+
+
+  document.getElementById("clear-order-btn").addEventListener("click", () => {
+    const localStorageOrderItems = JSON.parse(localStorage.getItem("orderItems") || "[]");
+    if (localStorageOrderItems.length === 0 && orderItems.length === 0) return;
+    if (confirm("Are you sure you want to clear the current order?")) {
+      orderItems = []
+      localStorage.removeItem("orderItems");
+      document.getElementById("order-preview").innerHTML = "No order items added";
+      document.getElementById("order-total").textContent = "KSh 0.00";
+    }
+  });
 });
 
 

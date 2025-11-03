@@ -9,49 +9,61 @@
 </head>
 
 <body>
-  <div class="print-container">
-    <h2 class="title">Order Summary</h2>
-
-    <!-- 🏫 School / Buyer & 🏢 Supplier / Vendor -->
-    <div class="details-section">
-      <div class="details-block">
-        <h4>School / Buyer Details</h4>
-        <p><strong>Name:</strong> <span id="school-name">-</span></p>
-        <p><strong>Town:</strong> <span id="school-town">-</span></p>
-        <p><strong>Contact:</strong> <span id="school-contact">-</span></p>
+  <div class="page-wrapper">
+    <div class="top-bar not-print">
+      <div class="bar-left">
+        <button class="back-btn" id="back-btn">← Back</button>
       </div>
-
-      <div class="details-block">
-        <h4>Supplier / Vendor Details</h4>
-        <p><strong>Name:</strong> <span id="vendor-name">-</span></p>
-        <p><strong>Town:</strong> <span id="vendor-town">-</span></p>
-        <p><strong>Contact:</strong> <span id="vendor-contact">-</span></p>
+      <div class="bar-center">
+        <strong>Total:</strong> <span id="top-total">KSh 0.00</span>
+      </div>
+      <div class="bar-right">
+        <button id="print-btn">🖨️ Print</button>
       </div>
     </div>
+    <div class="print-container">
+      <h2 class="title">Order Summary</h2>
 
-    <!-- 🧾 Order Table -->
-    <table class="order-table">
-      <thead>
-        <tr>
-          <th>No</th>
-          <th>Product</th>
-          <th>Qty</th>
-          <th>Price</th>
-          <th>Amount</th>
-        </tr>
-      </thead>
-      <tbody id="order-items-body"></tbody>
-    </table>
+      <!-- 🏫 School / Buyer & 🏢 Supplier / Vendor -->
+      <div class="details-section">
+        <div class="details-block">
+          <h4>School / Buyer Details</h4>
+          <p><strong>Name:</strong> <span id="school-name">-</span></p>
+          <p><strong>Town:</strong> <span id="school-town">-</span></p>
+          <p><strong>Contact:</strong> <span id="school-contact">-</span></p>
+        </div>
 
-    <!-- 💰 Totals + Print Button -->
-    <div class="footer-section">
-      <div class="total">
-        Total Order Value: <span id="order-total">KSh 0.00</span>
+        <div class="details-block">
+          <h4>Supplier / Vendor Details</h4>
+          <p><strong>Name:</strong> <span id="vendor-name">-</span></p>
+          <p><strong>Town:</strong> <span id="vendor-town">-</span></p>
+          <p><strong>Contact:</strong> <span id="vendor-contact">-</span></p>
+        </div>
       </div>
-      <button id="print-btn" class="print-btn">🖨 Print</button>
+
+      <!-- 🧾 Order Table -->
+      <table class="order-table">
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>sku</th>
+            <th>Product</th>
+            <th>Qty</th>
+            <th>Price</th>
+            <th>Amount</th>
+          </tr>
+        </thead>
+        <tbody id="order-items-body"></tbody>
+      </table>
+
+      <!-- 💰 Totals + Print Button -->
+      <div class="footer-section">
+        <div class="total">
+          Total Order Value: <span id="order-total">KSh 0.00</span>
+        </div>
+      </div>
     </div>
   </div>
-
   <script src="./printorderform.js"></script>
 </body>
 
