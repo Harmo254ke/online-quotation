@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Print Order Form</title>
+  <link rel="stylesheet" href="../styles/printorderform.css" />
+</head>
+
+<body>
+  <div class="print-container">
+    <h2 class="title">Order Summary</h2>
+
+    <!-- 🏫 School / Buyer & 🏢 Supplier / Vendor -->
+    <div class="details-section">
+      <div class="details-block">
+        <h4>School / Buyer Details</h4>
+        <p><strong>Name:</strong> <span id="school-name">-</span></p>
+        <p><strong>Town:</strong> <span id="school-town">-</span></p>
+        <p><strong>Contact:</strong> <span id="school-contact">-</span></p>
+      </div>
+
+      <div class="details-block">
+        <h4>Supplier / Vendor Details</h4>
+        <p><strong>Name:</strong> <span id="vendor-name">-</span></p>
+        <p><strong>Town:</strong> <span id="vendor-town">-</span></p>
+        <p><strong>Contact:</strong> <span id="vendor-contact">-</span></p>
+      </div>
+    </div>
+
+    <!-- 🧾 Order Table -->
+    <table class="order-table">
+      <thead>
+        <tr>
+          <th>No</th>
+          <th>Product</th>
+          <th>Qty</th>
+          <th>Price</th>
+          <th>Amount</th>
+        </tr>
+      </thead>
+      <tbody id="order-items-body"></tbody>
+    </table>
+
+    <!-- 💰 Totals + Print Button -->
+    <div class="footer-section">
+      <div class="total">
+        Total Order Value: <span id="order-total">KSh 0.00</span>
+      </div>
+      <button id="print-btn" class="print-btn">🖨 Print</button>
+    </div>
+  </div>
+
+  <script src="./printorderform.js"></script>
+</body>
+
+</html>

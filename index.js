@@ -22,30 +22,49 @@ import { loadCSV } from "./database/loadCsv.js";
   * @param {OrderItem[]} orderItems
   * @param {PointerEvent} event
   */
-const printOrder = (event, orderItems) => {
-  if (orderItems.length === 0) return;
-  console.log("It is not that first now slow")
-  /** @type {HTMLButtonElement}*/
-  const button = event.target;
-  const orderPreview = document.getElementById("order-preview");
-  const totalsPrint = document.getElementById("totals-print-button");
-  const currentText = button.textContent.trim();
-  if (currentText === "go to print page") {
-    const printStyle = document.createElement('link');
-    printStyle.rel = 'stylesheet';
-    printStyle.href = './src/styles/printorderform.css'; // <-- your print-specific stylesheet
-    printStyle.media = 'all';
-    printStyle.onload = () => {
-      button.textContent = "print order form"
-      document.body.innerHTML = ""
-      document.body.appendChild(orderPreview)
-      document.body.appendChild(totalsPrint)
-    };
-    document.head.appendChild(printStyle);
-  } else {
-    window.print();
+const printOrder = (e, orderItems) => {
+  e.preventDefault();
+
+  if (orderItems.length === 0) {
+    alert("No order items to print!");
+    return;
   }
-}
+
+  localStorage.setItem("orderItems", JSON.stringify(orderItems));
+
+  const modalEl = document.getElementById("orderDetailsModal");
+  const form = document.getElementById("orderDetailsForm");
+  const modal = new bootstrap.Modal(modalEl);
+
+  //Prefill form if data already exists
+  const existingDetails = JSON.parse(localStorage.getItem("orderDetails") || "{}");
+  if (Object.keys(existingDetails).length > 0) {
+    for (const [key, value] of Object.entries(existingDetails)) {
+      const input = form.querySelector(`[name="${key}"]`);
+      if (input) input.value = value;
+    }
+  }
+
+  //Show modal
+  modal.show();
+
+  //Handle confirmation
+  const confirmBtn = document.getElementById("confirmDetailsBtn");
+  confirmBtn.onclick = () => {
+    if (!form.reportValidity()) return;
+
+    const formData = new FormData(form);
+    const details = Object.fromEntries(formData.entries());
+    localStorage.setItem("orderDetails", JSON.stringify(details));
+
+    modal.hide();
+
+    // Navigate after saving
+    const printBtn = e.target;
+    window.location.href = printBtn.href;
+  };
+};
+
 
 /**
   * @param {number[]} amounts
@@ -56,12 +75,11 @@ const updateTotal = (amounts) => {
   totalViewer.textContent = newTotal;
 }
 window.addEventListener('load', async () => {
-  /** @type {HTMLButtonElement} */
+  /** @type {HTMLAnchorElement} */
   const printButton = document.getElementById("print-order-btn");
   const data = await loadCSV()
   /** @type {OrderItem[]} */
   const orderItems = []
-
 
   /**
    * @param {Quotation} item
@@ -81,7 +99,9 @@ window.addEventListener('load', async () => {
     updateTotal(orderItems.map(i => i.amount))
   }
 
-  printButton.onclick = (event) => printOrder(event, orderItems)
+  printButton.addEventListener("click", (e) => {
+    printOrder(e, orderItems)
+  });
   QuotationTable(data, 7, addToOrder);
 });
 

@@ -14,9 +14,9 @@
 
   <!-- html2canvas CDN -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-  <script type="module" src="./src/index.js"></script>
-  <link rel="stylesheet" href="./src/styles/table.css" />
-  <link rel="stylesheet" href="./src/styles/index.css" />
+  <script type="module" src="./index.js"></script>
+  <link rel="stylesheet" href="./styles/table.css" />
+  <link rel="stylesheet" href="./styles/index.css" />
   <title>Simple CSV Loader</title>
 </head>
 
@@ -80,10 +80,61 @@
               <div class="fw-semibold totals">
                 Total order value : <span id="order-total" class="text-success">KSh 0.00</span>
               </div>
-              <button id="print-order-btn" class="btn btn-primary btn-sm">
-                <i class="bi bi-printer"></i> go to print page </button>
+              <a href="./printing/printorderform.html" id="print-order-btn" class="btn btn-primary btn-sm">
+                <i class="bi bi-printer"></i> Go to print page
+              </a>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Bootstrap Modal -->
+  <div class="modal fade" id="orderDetailsModal" tabindex="-1" aria-labelledby="orderDetailsModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="orderDetailsModalLabel">Order Form Details</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <form id="orderDetailsForm">
+            <h6 class="fw-bold mt-2">School Details</h6>
+            <div class="mb-2">
+              <label class="form-label">School Name *</label>
+              <input type="text" class="form-control" name="schoolName" required>
+            </div>
+            <div class="mb-2">
+              <label class="form-label">Town *</label>
+              <input type="text" class="form-control" name="schoolTown" required>
+            </div>
+            <div class="mb-2">
+              <label class="form-label">Contact Info *</label>
+              <input type="text" class="form-control" name="schoolContact" required>
+            </div>
+
+            <h6 class="fw-bold mt-3">Supplier Details</h6>
+            <div class="mb-2">
+              <label class="form-label">Supplier Name *</label>
+              <input type="text" class="form-control" name="vendorName" required>
+            </div>
+            <div class="mb-2">
+              <label class="form-label">Town</label>
+              <input type="text" class="form-control" name="vendorTown">
+            </div>
+            <div class="mb-2">
+              <label class="form-label">Contact Info</label>
+              <input type="text" class="form-control" name="vendorContact">
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+          <button class="btn btn-primary" id="confirmDetailsBtn">Continue</button>
         </div>
       </div>
     </div>

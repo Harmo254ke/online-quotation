@@ -1,0 +1,113 @@
+/* Layout */
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #1a1a1a;
+  background: #fff;
+  padding: 40px;
+  margin: 0;
+}
+
+.print-container {
+  min-width: 18cm;
+  max-width: 21cm;
+  /* exactly A4 width */
+  margin: 0 auto;
+  border: 1px solid green;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+/* Titles */
+.title {
+  text-align: center;
+  color: #0b6b32;
+  margin-bottom: 30px;
+}
+
+/* Details Section */
+.details-section {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  gap: 30px;
+}
+
+.details-block h4 {
+  color: #0b6b32;
+  text-decoration: underline;
+  margin-bottom: 10px;
+}
+
+.details-block>p>strong,
+.details-block>p>span {
+  color: #0b6b32;
+}
+
+.details-block p {
+  margin: 4px 0;
+}
+
+/* Table */
+.order-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 25px;
+  color: #0b3d1f;
+}
+
+.order-table th,
+.order-table td {
+  border: 1px solid #77c27b;
+  padding: 10px;
+  text-align: left;
+}
+
+.order-table th {
+  background: #bdecb6;
+  color: #0b3d1f;
+  font-weight: bold;
+}
+
+.order-table tr:nth-child(even) {
+  background: #f3fff3;
+}
+
+/* Footer */
+.footer-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  color: #0b3d1f;
+}
+
+.print-btn {
+  background: #0b6b32;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.print-btn:hover {
+  background: #095428;
+}
+
+/* Print optimization */
+@media print {
+  .print-btn {
+    display: none;
+  }
+
+  body {
+    background: none;
+    color: #000;
+  }
+
+  .order-table th {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}
