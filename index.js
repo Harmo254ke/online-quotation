@@ -79,22 +79,117 @@ const updateTotal = (amounts) => {
 window.addEventListener('load', async () => {
   /** @type {HTMLAnchorElement} */
   const printButton = document.getElementById("print-order-btn");
+  /**@type{Quotation[]} */
   const data = await loadCSV()
+
+  /**
+ * Generic search helper — ranks and limits results
+ * @param {string} query - Search text
+ * @param {'name' | 'category'} field - Field to search by
+ */
+  const searchData = (query, field) => {
+    // Normalize search
+    const q = query.toLowerCase();
+
+
+    // Filter and rank loosely (substring match)
+    const ranked = data
+      .map(item => {
+        const value = (item[field] || "").toLowerCase();
+        const index = value.indexOf(q);
+        return {
+          item,
+          rank: index === -1 ? Infinity : index,
+        };
+      })
+      .filter(r => r.rank !== Infinity)
+      .sort((a, b) => a.rank - b.rank)
+      .slice(0, 7)
+      .map(r => r.item);
+
+    // Re-render results only (don’t mutate `data`)
+    QuotationTable(ranked, 7, addToOrder);
+  };
+
+  // wrappers for convenience
+  const searchByName = (name) => searchData(name, "name");
+  const searchByCategory = (category) => searchData(category, "category");
+
+  const performSearch = (param) => {
+    if (param === "") return;
+    /** @type{HTMLSelectElement} */
+    const searchType = document.getElementById("search-type");
+    const searchBy = searchType.value.trim();
+    if (searchBy === "name") {
+      searchByName(param);
+    } else if (searchBy === "category") {
+      searchByCategory(param);
+    }
+  }
+
+  const search = () => {
+    /** @type{HTMLInputElement} */
+    const searchInput = document.getElementById("search-input");
+    const param = searchInput.value.trim();
+    performSearch(param)
+  }
+
+  const searchOnKeyDown = (event) => {
+    if (event.key === "Enter") {
+      event.preventDefault(); // prevent form submission if inside a form
+      const param = event.target.value.trim();
+      performSearch(param)
+    }
+  };
+  /** @type{HTMLInputElement} */
+  const searchInput = document.getElementById("search-input");
+  searchInput.addEventListener("keydown", (event) => searchOnKeyDown(event))
+  /** @type{HTMLButtonElement} */
+  const searchButton = document.getElementById("search-btn");
+  searchButton.addEventListener("click", () => search());
+
   /** @type {OrderItem[]} */
   let orderItems = []
 
+
+  const updateOrderItem = (updated) => {
+    orderItems = orderItems.map(item => {
+      if (item.id === updated.id) {
+        return updated;
+      } else {
+        return item;
+      }
+    });
+
+    OrderItemsViewer(orderItems, updateOrderItem, deleteItem)
+    updateTotal(orderItems.map(i => i.amount))
+
+    localStorage.setItem("orderItems", JSON.stringify(orderItems));
+  }
+  const deleteItem = (deletedId) => {
+    console.log(`Delete item with id: ${deletedId}`)
+    orderItems = orderItems.filter(item => {
+      return item.id !== deletedId;
+    });
+
+    OrderItemsViewer(orderItems, updateOrderItem, deleteItem)
+    updateTotal(orderItems.map(i => i.amount))
+
+    localStorage.setItem("orderItems", JSON.stringify(orderItems));
+  }
   /** @type {OrderItem[]} */
   const localStorageOrderItems = JSON.parse(localStorage.getItem("orderItems") || "[]");
   if (localStorageOrderItems.length > 0) {
     orderItems = localStorageOrderItems;
-    OrderItemsViewer(orderItems)
+    OrderItemsViewer(orderItems, updateOrderItem, deleteItem)
     updateTotal(orderItems.map(i => i.amount))
   }
+
   /**
    * @param {Quotation} item
    * @param {number} quantity
    */
-  const addToOrder = (item, quantity) => {
+  function addToOrder(item, quantity) {
     /**
       * @type {OrderItem}
       */
@@ -103,8 +198,18 @@ window.addEventListener('load', async () => {
       quantity: quantity,
       amount: quantity * item.price
     }
-    orderItems.push(orderItem)
-    OrderItemsViewer(orderItems)
+    const existsId = orderItems.findIndex(i => {
+      return i.id === orderItem.id
+    });
+    if (existsId > -1) {
+      const existingItem = orderItems[existsId];
+      const newQuantity = existingItem.quantity + orderItem.quantity;
+      const updatedItem = { ...existingItem, quantity: newQuantity, amount: newQuantity * orderItem.price }
+      orderItems[existsId] = updatedItem;
+    } else {
+      orderItems.push(orderItem)
+    }
+    OrderItemsViewer(orderItems, updateOrderItem, deleteItem)
     localStorage.setItem("orderItems", JSON.stringify(orderItems));
     updateTotal(orderItems.map(i => i.amount))
   }
@@ -113,6 +218,9 @@ window.addEventListener('load', async () => {
     printOrder(e, orderItems)
   });
   QuotationTable(data, 7, addToOrder);
+  document.getElementById("refresh-btn").addEventListener("click", () => {
+    QuotationTable(data, 7, addToOrder);
+  });
 
 
   document.getElementById("clear-order-btn").addEventListener("click", () => {

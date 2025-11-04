@@ -21,6 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
     total += amount;
     tr.innerHTML = `
       <td>${i + 1}</td>
+      <td>${item.id}</td>
       <td>${item.sku}</td>
       <td>${item.name}</td>
       <td>${item.quantity}</td>
