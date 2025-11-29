@@ -1,10 +1,12 @@
 import Money from "./Money.js";
 
+
 /**
  * @typedef {Object} Quotation
  * @property {number} id
  * @property {string} name
  * @property {string} category
+ * @property {number} productUnitId
  * @property {string} unit
  * @property {number} price
  */
@@ -31,7 +33,7 @@ const calculateAmount = (quantityId, amountId, price) => {
 }
 
 /**
-  * @param {PointerEvent} event
+  * @param {MouseEvent} event
   */
 const changeInnerText = (event) => {
   const button = event.target;
@@ -62,7 +64,7 @@ const QuotationTable = (data, pageSize, addToOrderForm) => {
   const pagination = document.getElementById('pagination');
 
   // First time load: first page by default, 'useEffect'
-  renderPage(tbody, currentPage, totalPages, pagination, pageSize, data);
+  renderPage(tbody, currentPage, totalPages, pagination);
   /**
     * @param {HTMLButtonElement} addButton
     * @param {string} quantityId
@@ -99,11 +101,11 @@ const QuotationTable = (data, pageSize, addToOrderForm) => {
       // id (hidden)
       const tdId = document.createElement("td");
       tdId.hidden = true;
-      tdId.textContent = item.id;
+      tdId.textContent = item.id.toString();
 
       // No
       const tdNo = document.createElement("td");
-      tdNo.textContent = index + 1;
+      tdNo.textContent = (index + 1).toString();
 
       // Name
       const tdName = document.createElement("td");
@@ -134,7 +136,7 @@ const QuotationTable = (data, pageSize, addToOrderForm) => {
       addBtn.textContent = "Add";
       tdAction.appendChild(addBtn);
 
-      // Append all <td> to <tr>
+      // Append all <td> to tr element
       row.append(
         tdId,
         tdNo,

@@ -89,6 +89,11 @@ div.bar-left>button.back-btn {
   margin-bottom: 10px;
 }
 
+.order-date p {
+  color: #0b6b32;
+  margin-bottom: 10px;
+}
+
 .details-block>p>strong,
 .details-block>p>span {
   color: #0b6b32;

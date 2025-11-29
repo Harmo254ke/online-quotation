@@ -4,7 +4,7 @@
  * @property {number} id
  * @property {string} name
  * @property {string} category
- * @property {string} sku
+ * @property {number} productUnitId
  * @property {string} unit
  * @property {number} price
  */
@@ -19,14 +19,12 @@ export async function loadCSV() {
 
   const rows = text.trim().split(/\r?\n/).map(r => r.split(',')).slice(1); // skip header
 
-  /** @type {Quotation[]} */
-  const quotation = rows.map(row => ({
-    id: Number(row[0]),
-    name: row[1],
-    category: row[2],
-    sku: row[3],
-    unit: row[4],
-    price: Number(row[5]),
+  return rows.map(row => ({
+      id: Number(row[0]),
+      productUnitId: Number(row[1]),
+      name: row[2],
+      category: row[3],
+      unit: row[4],
+      price: Number(row[5]),
   }));
-  return quotation;
 }

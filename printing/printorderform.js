@@ -9,6 +9,8 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("vendor-name").textContent = orderDetails.vendorName || "-";
   document.getElementById("vendor-town").textContent = orderDetails.vendorTown || "-";
   document.getElementById("vendor-contact").textContent = orderDetails.vendorContact || "-";
+  const currentDate = new Date();
+  document.getElementById("date").textContent = currentDate.toLocaleString();
 
   //additional totals
 
@@ -22,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
     tr.innerHTML = `
       <td>${i + 1}</td>
       <td>${item.id}</td>
-      <td>${item.sku}</td>
+      <td>${item.productUnitId}</td>
       <td>${item.name}</td>
       <td>${item.quantity}</td>
       <td>${item.price.toLocaleString()}</td>
